@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Amp Academy — 4–9 min phone pitch · v1 · 2026-06-21 · maps to AA_PHONE_SCRIPT -->
+<html lang="en" data-theme="light"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amp Academy — Pitch</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--head:'Syne',sans-serif;--body:'Inter',sans-serif;--mono:'Space Mono',monospace;
+--paper:#0E1422;--card:#161E2E;--ink:#EAEEF6;--muted:#9AA4B6;--line:#2A3550;--amber:#F2A93B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);height:100vh;overflow:hidden}
+.stage{height:100vh;display:flex;align-items:center;justify-content:center;padding:5vw}
+.slide{display:none;max-width:880px;width:100%;animation:f .35s ease}
+.slide.on{display:block}
+@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.kik{font-family:var(--mono);font-size:13px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(28px,6vw,56px);line-height:1.05;margin-bottom:18px}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(22px,4.5vw,40px);line-height:1.1;margin-bottom:18px}
+p{font-size:clamp(15px,2.4vw,21px);color:var(--muted);line-height:1.55;max-width:680px}
+.big{color:var(--ink)}
+ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:14px}
+li{font-size:clamp(15px,2.4vw,20px);display:flex;gap:12px;align-items:flex-start;line-height:1.4}
+li b{color:var(--ink)}
+.dot{color:var(--amber);font-weight:800;flex:none}
+.logo{display:inline-flex;align-items:center;gap:12px;margin-bottom:26px}
+.mark{width:54px;height:54px;border-radius:14px;background:var(--amber);color:#241606;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800}
+.logo .n{font-family:var(--head);font-weight:800;font-size:22px}
+.pill{display:inline-block;background:#1E2740;border:1px solid var(--line);color:var(--amber);font-family:var(--mono);font-size:13px;padding:6px 12px;border-radius:999px;margin-top:22px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.box h3{font-family:var(--head);font-size:18px;margin-bottom:8px}
+.box p{font-size:15px}
+.cta{margin-top:26px;font-size:clamp(18px,3vw,26px);color:var(--ink);font-weight:600}
+.cta b{color:var(--amber)}
+.price{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+.price div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.price .v{font-family:var(--head);font-weight:800;font-size:24px;color:var(--amber)}
+.price .l{font-size:13px;color:var(--muted)}
+.nav{position:fixed;bottom:18px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:18px;z-index:10}
+.nav button{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:9px 16px;font-family:var(--mono);font-size:14px;cursor:pointer}
+.nav button:hover{border-color:var(--amber)}
+.count{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.bar{position:fixed;top:0;left:0;height:4px;background:var(--amber);transition:width .3s;z-index:10}
+.foot{position:fixed;bottom:54px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted)}
+</style></head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="stage">
+
+  <section class="slide on">
+    <div class="logo"><span class="mark">&#9889;</span><span class="n">Amp Academy</span></div>
+    <h1>Training that <span style="color:var(--amber)">proves</span> they learned it.</h1>
+    <p class="big">Installable, works-offline electrician courses — with verified completion you can audit. Not "hit play and walk away."</p>
+    <span class="pill">~5 minutes · all four NEC editions</span>
+  </section>
+
+  <section class="slide">
+    <div class="kik">The problem</div>
+    <h2>Most online code training proves nothing.</h2>
+    <p>Students hit play, walk away, and you can't tell who actually learned. For a real program — apprentices, a cohort, funding on the line — that's a problem.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kik">What it is · 1 of 3</div>
+    <h2>Installs like an app. Works offline.</h2>
+    <p>Add it to a phone or laptop from a link — no app store, no IT project. It runs in a basement, on a job site, with no signal.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kik">What it is · 2 of 3 — the difference</div>
+    <h2>It proves learning.</h2>
+    <ul>
+      <li><span class="dot">&#9889;</span><span>Video lessons make the student <b>answer to continue</b> — no passive watching.</span></li>
+      <li><span class="dot">&#9889;</span><span>Completion is <b>earned on a real assessment</b>.</span></li>
+      <li><span class="dot">&#9889;</span><span>Every student gets a <b>verifiable certificate</b> — you or an employer can confirm it's real.</span></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <div class="kik">What it is · 3 of 3</div>
+    <h2>All four NEC editions + Ask Sader, an honest AI helper.</h2>
+    <p>2017, 2020, 2023, 2026 — one place. Ask Sader — an AI helper that <b class="big">gives the code article and never makes up a value</b>, and even answers in <b class="big">Spanish</b>.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kik">Why it fits you</div>
+    <div class="two">
+      <div class="box"><h3>School / VOTECH</h3><p>Run it with one electrical cohort. Instructors keep teaching; you get auditable proof and Ask Sader, on call 24/7.</p></div>
+      <div class="box"><h3>IBEW / JATC</h3><p>Drop it into one apprentice class. Sits under your training budget; gives the JATC verified records.</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="kik">The offer</div>
+    <h2>Start with a free pilot.</h2>
+    <p>One cohort, no cost, no commitment. We set a start date and a simple success bar, and look at the numbers together at <b class="big">day 30</b>. If it worked, we make it official.</p>
+    <div class="price">
+      <div><div class="v">FREE</div><div class="l">pilot · one cohort</div></div>
+      <div><div class="v">$129</div><div class="l">/ seat / year</div></div>
+      <div><div class="v">$3–6k</div><div class="l">/ cohort / year</div></div>
+    </div>
+    <p style="margin-top:14px;font-size:15px">Well under the ~$4,500/apprentice you already spend on training.</p>
+  </section>
+
+  <section class="slide">
+    <div class="kik">Trust</div>
+    <h2>Built FERPA-first.</h2>
+    <ul>
+      <li><span class="dot">&#9889;</span><span><b>No personal student data on the device</b> — the course runs offline.</span></li>
+      <li><span class="dot">&#9889;</span><span>Encrypted, locked down <b>row-by-row</b> per school, with an audit trail.</span></li>
+      <li><span class="dot">&#9889;</span><span>We sign a <b>data agreement (DPA)</b> before any real student info is involved.</span></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <div class="logo"><span class="mark">&#9889;</span><span class="n">Amp Academy</span></div>
+    <h2>Let's put it in your hands.</h2>
+    <p class="cta">Give me <b>15 minutes in person</b> — we'll set up a free pilot cohort and you'll see the proof.</p>
+    <span class="pill">michaellukasme-dot.github.io/amp-academy/</span>
+  </section>
+
+</div>
+
+<div class="foot">← → arrows or tap to advance · for the rep: follow the phone script</div>
+<div class="nav">
+  <button onclick="go(-1)">&larr; Prev</button>
+  <span class="count" id="count">1 / 9</span>
+  <button onclick="go(1)">Next &rarr;</button>
+</div>
+<script>
+var s=document.querySelectorAll('.slide'),i=0;
+function show(n){s[i].classList.remove('on');i=Math.max(0,Math.min(s.length-1,n));s[i].classList.add('on');
+document.getElementById('count').textContent=(i+1)+' / '+s.length;
+document.getElementById('bar').style.width=((i+1)/s.length*100)+'%';}
+function go(d){show(i+d);}
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' ')go(1);if(e.key==='ArrowLeft')go(-1);});
+document.querySelector('.stage').addEventListener('click',function(e){if(e.clientX> innerWidth/2)go(1);else go(-1);});
+show(0);
+</script>
+</body></html>

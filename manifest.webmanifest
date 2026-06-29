@@ -1,0 +1,12 @@
+{
+  "name": "Amp Academy — Campus",
+  "short_name": "Amp Academy",
+  "description": "Your Amp Academy courses, one home. Installable, offline.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0D1B2A",
+  "theme_color": "#0D1B2A",
+  "icons": [ { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" } ]
+}

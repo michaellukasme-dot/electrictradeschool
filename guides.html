@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Amp Academy — Guides hub · v0.1 · 2026-06-21 · AA Design System v1 · honest-state -->
+<html lang="en" data-theme="light"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amp Academy — Guides &amp; Help</title>
+<meta name="theme-color" content="#0D1B2A">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--head:'Syne',sans-serif;--body:'Inter',sans-serif;--mono:'Space Mono',ui-monospace,monospace}
+[data-theme="light"]{--paper:#F6F8FC;--navy2:#FFFFFF;--navy:#241606;--ink:#16202E;--muted:#5A6472;--line:#D8E0EC;--amber:#F2A93B;--note-bg:#F2A93B1f;--note-tx:#16202E}
+[data-theme="dark"]{--paper:#0E1422;--navy2:#161E2E;--navy:#0E1422;--ink:#EAEEF6;--muted:#9AA4B6;--line:#2A3550;--amber:#F2A93B;--note-bg:#1E2740;--note-tx:#EAEEF6}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body);background:var(--paper);color:var(--ink);transition:background .2s,color .2s}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 20px 90px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.logo{width:44px;height:44px;border-radius:11px;background:var(--amber);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px}
+.top h1{font-size:20px;margin:0;font-weight:800;font-family:var(--head)}
+.top .sub{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.toggle{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--navy2);border:1px solid var(--line);border-radius:999px;padding:7px 13px;cursor:pointer}
+.back{font-size:12px;color:var(--muted);text-decoration:none;font-family:var(--mono)}
+.back:hover{color:var(--amber)}
+.note{background:var(--note-bg);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:10px 14px;font-size:12.5px;line-height:1.5;color:var(--note-tx);margin:14px 0 18px}
+.section-h{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:22px 0 8px;font-family:var(--mono)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .stripe{height:6px}
+.card .body{padding:15px 16px;flex:1;display:flex;flex-direction:column;gap:8px}
+.card .who{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-family:var(--mono)}
+.card h3{font-size:16px;margin:0;line-height:1.25;font-family:var(--head)}
+.card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.5}
+.card .foot{padding:0 16px 16px;display:flex;align-items:center;gap:8px}
+.btn{background:var(--amber);color:var(--navy);border:0;border-radius:8px;padding:8px 14px;font-weight:700;cursor:pointer;font-family:inherit;font-size:13px;text-decoration:none;display:inline-block}
+.tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em;background:var(--note-bg);color:var(--muted)}
+.foota{margin-top:26px;font-size:11px;color:var(--muted);line-height:1.6}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo">&#128214;</div>
+    <div><h1>Guides &amp; Help</h1><div class="sub">Amp Academy · everything you need to teach, learn &amp; deploy</div></div>
+    <button class="toggle" id="tg" style="margin-left:auto" onclick="tgTheme()"><span id="tgi">&#9728;</span> <span id="tgt">Light</span></button>
+  </div>
+
+  <a class="back" href="index.html">&larr; Back to Campus</a>
+
+  <div class="note">
+    These guides are <strong>plain and honest</strong>: they describe what Amp Academy actually does today — installable,
+    offline-first courses with no student data leaving the device, verified completion, and Ask Sader, an honest AI helper. Where a
+    feature is roster- or subscription-gated, the guide says so.
+  </div>
+
+  <div class="section-h">For students</div>
+  <div class="grid">
+    <div class="card"><div class="stripe" style="background:#F4A300"></div>
+      <div class="body"><div class="who">Student</div><h3>Student User Guide</h3>
+        <p>How to install a course to your phone or laptop, work offline, use Ask Sader, take quizzes, and earn your verified certificate.</p>
+        <span class="tag">PDF</span></div>
+      <div class="foot"><a class="btn" href="guides/AA_Student_Guide.pdf" target="_blank" rel="noopener">Open guide &rarr;</a></div></div>
+
+    <div class="card"><div class="stripe" style="background:#1D9E75"></div>
+      <div class="body"><div class="who">Anyone</div><h3>Install / Quick-Setup</h3>
+        <p>One-page walkthrough: add Amp Academy to your home screen as an app on iPhone, Android, Mac, or Windows — no app store needed.</p>
+        <span class="tag">HTML</span></div>
+      <div class="foot"><a class="btn" href="guides/Installation_Quick_Setup.html" target="_blank" rel="noopener">Open setup &rarr;</a></div></div>
+  </div>
+
+  <div class="section-h">For instructors</div>
+  <div class="grid">
+    <div class="card"><div class="stripe" style="background:#7F77DD"></div>
+      <div class="body"><div class="who">Instructor</div><h3>Instructor Guide</h3>
+        <p>Running a cohort, assigning courses, what completion + certificates mean, and how Ask Sader, the honest AI helper, supports (not replaces) your teaching.</p>
+        <span class="tag">PDF</span></div>
+      <div class="foot"><a class="btn" href="guides/AA_Instructor_Guide.pdf" target="_blank" rel="noopener">Open guide &rarr;</a></div></div>
+  </div>
+
+  <div class="section-h">For admins, IT &amp; districts</div>
+  <div class="grid">
+    <div class="card"><div class="stripe" style="background:#378ADD"></div>
+      <div class="body"><div class="who">Admin · IT</div><h3>Admin / IT &amp; Privacy Guide</h3>
+        <p>Deployment, the one-icon Campus, offline architecture, and the privacy posture (FERPA-first, no student data in the client) for school &amp; district review.</p>
+        <span class="tag">PDF</span></div>
+      <div class="foot"><a class="btn" href="guides/AA_Admin_IT_Privacy_Guide.pdf" target="_blank" rel="noopener">Open guide &rarr;</a></div></div>
+
+    <div class="card"><div class="stripe" style="background:#D85A30"></div>
+      <div class="body"><div class="who">Overview</div><h3>Amp Academy Overview</h3>
+        <p>The one-pager: what Amp Academy is, the course catalog, and how the pieces fit together. Good first read for partners.</p>
+        <span class="tag">PDF</span></div>
+      <div class="foot"><a class="btn" href="guides/AA_Overview.pdf" target="_blank" rel="noopener">Open overview &rarr;</a></div></div>
+  </div>
+
+  <div class="foota">
+    Amp Academy · Guides hub v0.1. Guides are version-stamped to the launch build. Questions a guide doesn't answer?
+    Ask Sader is always one tap away inside any lesson.
+  </div>
+</div>
+<script>
+function tgTheme(){var h=document.documentElement;var d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('tgi').innerHTML=d?'&#9728;':'&#9789;';document.getElementById('tgt').textContent=d?'Light':'Dark';try{localStorage.setItem('aa.theme',d?'light':'dark');}catch(e){}}
+(function(){try{var t=localStorage.getItem('aa.theme');if(t){document.documentElement.setAttribute('data-theme',t);var d=t==='dark';var i=document.getElementById('tgi'),x=document.getElementById('tgt');if(i)i.innerHTML=d?'&#9789;':'&#9728;';if(x)x.textContent=d?'Dark':'Light';}}catch(e){}})();
+</script>
+</body></html>

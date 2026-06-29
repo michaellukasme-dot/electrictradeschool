@@ -1,0 +1,104 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Amp Academy — landing site ("inside/out, colors hoisted") · v1 · 2026-06-20 · per DOC_AND_LANDING_STANDARD_v1.
+     Honest-state: real features + approved pricing only. Hangs off the Campus like a warship, colors hoisted. -->
+<title>Amp Academy — free, offline electrician training that proves you learned it</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+[data-theme="light"]{--bg:#F6F8FC;--surface:#FFFFFF;--s2:#EEF2F8;--border:#D8E0EC;--text:#16202E;--muted:#5A6472;--amber:#F2A93B;--amber-tx:#9A5E0A;--on-amber:#241606;--hero:linear-gradient(135deg,#1B2D4A,#26416B)}
+[data-theme="dark"]{--bg:#0E1422;--surface:#161E2E;--s2:#1E2740;--border:#2A3550;--text:#EAEEF6;--muted:#9AA4B6;--amber:#F2A93B;--amber-tx:#F2A93B;--on-amber:#0E1422;--hero:linear-gradient(135deg,#13203a,#0E1422)}
+:root{--head:'Syne',sans-serif;--body:'Inter',sans-serif;--mono:'Space Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;transition:background .2s,color .2s}
+h1,h2,h3{font-family:var(--head);letter-spacing:-.01em}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.nav{display:flex;align-items:center;gap:12px;padding:18px 0}
+.bolt{width:40px;height:40px;border-radius:10px;overflow:hidden}
+.brandname{font-family:var(--head);font-weight:800;font-size:18px}
+.nav .sp{flex:1}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;margin-left:16px;font-family:var(--mono)}
+.toggle{font-family:var(--mono);font-size:12px;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:7px 13px;cursor:pointer;margin-left:16px}
+.hero{background:var(--hero);color:#EAEEF6;border-radius:22px;padding:48px 36px;margin:8px 0 34px;text-align:center}
+.hero .pill{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-amber);background:var(--amber);padding:5px 12px;border-radius:999px;font-weight:700}
+.hero h1{font-family:var(--body);font-size:40px;font-weight:800;letter-spacing:-.022em;line-height:1.16;margin:16px 0 10px}
+.hero p{color:#c3d0e6;max-width:56ch;margin:0 auto 22px;font-size:17px}
+.cta{display:inline-block;background:var(--amber);color:var(--on-amber);font-weight:700;font-size:15px;padding:13px 26px;border-radius:11px;text-decoration:none}
+.cta.ghost{background:transparent;color:#EAEEF6;border:1px solid #ffffff44;margin-left:10px}
+.sec{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-tx);margin:38px 0 14px;text-align:center}
+.lead{text-align:center;max-width:62ch;margin:0 auto;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:14px;margin-top:8px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
+.card h3{font-size:16px;margin-bottom:6px}.card p{color:var(--muted);font-size:13.5px}
+.proof{background:var(--s2);border:1px solid var(--border);border-radius:16px;padding:22px;text-align:center;margin-top:8px;color:var(--muted);font-size:14px}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.ptier{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;text-align:center}
+.ptier.feature{border-top:4px solid var(--amber)}
+.ptier .big{font-family:var(--head);font-weight:800;font-size:30px;color:var(--amber-tx)}
+.ptier .u{font-size:12px;color:var(--muted)}
+.ptier p{font-size:12.5px;color:var(--muted);margin-top:8px}
+.foot{border-top:1px solid var(--border);margin-top:44px;padding:22px 0 40px;color:var(--muted);font-size:12px;text-align:center}
+.foot a{color:var(--amber-tx);text-decoration:none}
+@media(max-width:560px){.hero h1{font-size:30px}.cta.ghost{margin-left:0;margin-top:10px}}
+</style></head><body>
+<div class="wrap">
+  <div class="nav">
+    <div class="bolt"><svg viewBox="0 0 512 512" style="width:100%;height:100%"><rect width="512" height="512" rx="112" fill="#F2A93B"/><path d="M277 43 85 299h128l-21 171 192-256h-128z" fill="#241606"/></svg></div>
+    <div class="brandname">Amp Academy<span style="font-size:11px;vertical-align:super;color:var(--muted)">™</span></div>
+    <div class="sp"></div>
+    <a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#docs">Docs</a><a href="#get">Get it</a>
+    <button class="toggle" onclick="tg()"><span id="i">&#9728;</span> <span id="t">Light</span></button>
+  </div>
+
+  <div class="hero">
+    <span class="pill">Free · Offline · Installable</span>
+    <h1>Electrician training that actually proves you learned it.</h1>
+    <p>Free, installable courses + a verified NEC load calculator and Ask Sader, an honest AI helper. Works fully offline —
+       nothing leaves your device. Built for the trade, by the trade.</p>
+    <a class="cta" href="https://michaellukasme-dot.github.io/amp-academy/">Open Amp Academy →</a>
+    <a class="cta ghost" href="#features">See what's inside</a>
+  </div>
+
+  <div class="sec">What it is</div>
+  <p class="lead">A bouquet of free, offline, installable electrician courses and tools — NEC Journeyman editions
+     2017–2026, a multimeter course, an estimator, and a verified Article 220 load calculator — tied together by
+     the Campus and Ask Sader, an AI helper built never to fabricate code values.</p>
+
+  <div class="sec" id="features">What's inside</div>
+  <div class="grid">
+    <div class="card"><h3>Installs &amp; works offline</h3><p>Add any course to your phone, tablet, or lab PC; lose signal, it still runs. No logins, no ads, nothing leaves the device.</p></div>
+    <div class="card"><h3>Verified load calculator</h3><p>NEC Article 220 — shows every step and cites the section, so you can confirm it against your book.</p></div>
+    <div class="card"><h3>Ask Sader — an honest AI helper</h3><p>Answers and cites the Code — and tells you to confirm against your printed NFPA 70. It won't make up values.</p></div>
+    <div class="card"><h3>Earned completion</h3><p>Certificates unlock on a real assessment pass — not a timer. For programs: verifiable completion + verifiable video.</p></div>
+  </div>
+
+  <div class="sec">For programs &amp; institutions</div>
+  <div class="proof">Their video can't prove anyone learned — <strong>ours does, and records it.</strong> Roster,
+     verifiable completion, and active-recall video — built for IBEW / JATC / employer programs. (Institutional
+     backend is privacy-first and FERPA-aware; student-data features activate after counsel sign-off.)</div>
+
+  <div class="sec" id="pricing">Pricing</div>
+  <p class="lead">Start free. Go further when you're ready — and institutions get rostered, verifiable programs.</p>
+  <div class="prices" style="margin-top:14px">
+    <div class="ptier feature"><div class="big">Free</div><div class="u">to start</div><p>Load Calculator, sample lessons, and Ask Sader, our honest AI helper. No login, no ads, no data collected.</p></div>
+    <div class="ptier"><div class="big">$99</div><div class="u">one-time · all NEC editions</div><p>A full course (e.g., Journeyman) with every edition 2017–2026 included. Master $129.</p></div>
+    <div class="ptier"><div class="big">$199</div><div class="u">/year · All-Access</div><p>Every course, every edition, all tools and quick-classes. Or $24.99/mo.</p></div>
+    <div class="ptier"><div class="big">Programs</div><div class="u">per student / cohort</div><p>Rostered, instructor-led, verifiable completion for schools &amp; employers. <a href="#docs" style="color:var(--amber-tx)">Talk to us →</a></p></div>
+  </div>
+
+  <div class="sec" id="get">Get it</div>
+  <div style="text-align:center"><a class="cta" href="https://michaellukasme-dot.github.io/amp-academy/">Open the Campus →</a></div>
+
+  <div class="sec" id="docs">Docs</div>
+  <p class="lead"><a href="Installation_Quick_Setup.html">Installation Quick-Setup</a> ·
+     <a href="AA_Student_Guide.pdf">Student Guide</a> ·
+     <a href="AA_Instructor_Guide.pdf">Instructor Guide</a> ·
+     <a href="AA_Admin_IT_Privacy_Guide.pdf">Admin / IT &amp; Privacy</a></p>
+
+  <div class="foot">
+    Amp Academy™ — a LUKAS_APPS product. Study aids — not a substitute for the printed NFPA 70 (NEC).
+    No accreditation, pass-rate, or endorsement claims. · Landing v1 · 2026-06-20
+  </div>
+</div>
+<script>
+function tg(){var h=document.documentElement,d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('i').innerHTML=d?'&#9728;':'&#9789;';document.getElementById('t').textContent=d?'Light':'Dark';}
+</script>
+</body></html>

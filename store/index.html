@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Amp Academy — Store (the_reader × the_dealer) · The Electrical Code Coach store = first real dealer · 2026-06-23 · honest-state: house holds no money -->
+<html lang="en" data-theme="light"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amp Academy — Store</title>
+<meta name="theme-color" content="#0D1B2A">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--head:'Syne',sans-serif;--body:'Inter',sans-serif;--mono:'Space Mono',monospace}
+[data-theme="light"]{--paper:#F6F8FC;--card:#FFFFFF;--navy:#241606;--ink:#16202E;--muted:#5A6472;--line:#D8E0EC;--amber:#F2A93B;--dealer:#16BBD0;--note:#F2A93B1f}
+[data-theme="dark"]{--paper:#0E1422;--card:#161E2E;--navy:#0E1422;--ink:#EAEEF6;--muted:#9AA4B6;--line:#2A3550;--amber:#F2A93B;--dealer:#16BBD0;--note:#1E2740}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);transition:background .2s}
+.wrap{max-width:1000px;margin:0 auto;padding:18px 18px 80px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.logo{width:42px;height:42px;border-radius:11px;background:var(--amber);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:23px}
+.top h1{font-size:19px;font-weight:800;font-family:var(--head)}
+.top .sub{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.toggle{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 12px;cursor:pointer}
+.back{font-size:12px;color:var(--muted);text-decoration:none;font-family:var(--mono)}
+.back:hover{color:var(--amber)}
+.tabs{display:flex;gap:8px;margin:16px 0 0;flex-wrap:wrap}
+.tab{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+.tab.on{background:var(--amber);color:var(--navy);border-color:var(--amber)}
+.tab.soon{opacity:.6;cursor:default}
+.dhead{background:linear-gradient(135deg,#16BBD0,#0E9FB3);color:#04323a;border-radius:14px;padding:16px 18px;margin:14px 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.dhead .nm{font-size:19px;font-weight:800;font-family:var(--head)}
+.dhead .kd{font-size:12.5px;opacity:.9}
+.dhead .sp{flex:1}
+.reg{background:#fff;border-radius:10px;padding:7px 11px;font-size:11.5px;color:#04323a;font-weight:600}
+.note{background:var(--note);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:0 9px 9px 0;padding:11px 14px;font-size:12.5px;line-height:1.55;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:14px;margin-top:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{height:84px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,#16BBD022,#F2A93B22)}
+.card .b{padding:13px 14px;flex:1;display:flex;flex-direction:column;gap:6px}
+.card h3{font-size:15px;font-family:var(--head)}
+.card .meta{font-size:11.5px;color:var(--muted)}
+.card .pr{font-weight:800;color:var(--dealer);font-size:15px}
+.card .pr small{color:var(--muted);font-weight:500;font-size:11px}
+.card .f{padding:0 14px 14px}
+.buy{display:block;text-align:center;background:var(--amber);color:var(--navy);text-decoration:none;border-radius:9px;padding:9px;font-weight:700;font-size:13px}
+.foota{margin-top:22px;font-size:11px;color:var(--muted);line-height:1.6}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo">&#9889;</div>
+    <div style="flex:1"><h1>Amp Academy · Store</h1><div class="sub">the_reader — curated dealers, one shelf</div></div>
+    <button class="toggle" onclick="tg()"><span id="ti">&#9728;</span> <span id="tt">Light</span></button>
+  </div>
+  <a class="back" href="../index.html">&larr; Back to Campus</a>
+
+  <div class="tabs">
+    <button class="tab on">The Electrical Code Coach</button>
+    <button class="tab soon" title="more dealers coming">More dealers soon ＋</button>
+  </div>
+
+  <div class="dhead">
+    <div><div class="nm">⚡ The Electrical Code Coach</div><div class="kd">Memberships · tabbed code books · tabs · study aids</div></div>
+    <div class="sp"></div>
+    <div class="reg">💵 you buy direct from the Coach</div>
+  </div>
+
+  <div class="note"><b>How this works (honestly):</b> this is <b>The Electrical Code Coach's</b> store, riding along inside Amp Academy.
+  When you buy, you check out <b>on the Coach's own site</b> — <b>Amp Academy never handles your payment</b> (local rail).
+  The Coach ships and supports it; Amp Academy earns its share on the back end per our partnership. The house never sells NEC code books — the Coach does.</div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="foota">Market Surface · the_reader × the_dealer. Listings link out to <b>electricalcodecoach.com</b> (the Coach's
+  checkout). Amp Academy holds no money on this rail. Prices set by the Coach; confirm on the site.</div>
+</div>
+<script>
+var ECC="https://electricalcodecoach.com/", SHOP="https://electricalcodecoach.com/shop/ols/products";
+var ITEMS=[
+ ["ECC Pro Membership — all editions","$29.99/mo &nbsp;<small>or $89.99 lifetime</small>","Full videos, quizzes, flashcards · NEC 2017/2020/2023/2026","🎓",ECC],
+ ["Tabbed &amp; Highlighted Code Book","market price","Pre-tabbed + highlighted NEC — ready for the exam","📕",SHOP],
+ ["Code Tabs (free shipping)","market price","Self-stick tabs for your code book","🔖",SHOP]
+];
+document.getElementById("grid").innerHTML=ITEMS.map(function(it){return '<div class="card"><div class="ph">'+it[3]+'</div>'+
+ '<div class="b"><h3>'+it[0]+'</h3><div class="meta">'+it[2]+'</div><div class="pr">'+it[1]+'</div></div>'+
+ '<div class="f"><a class="buy" href="'+it[4]+'" target="_blank" rel="noopener">Get it from the Coach &rarr;</a></div></div>';}).join("");
+function tg(){var h=document.documentElement,d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('ti').innerHTML=d?'&#9728;':'&#9789;';document.getElementById('tt').textContent=d?'Light':'Dark';try{localStorage.setItem('aa.theme',d?'light':'dark');}catch(e){}}
+(function(){try{var t=localStorage.getItem('aa.theme');if(t){document.documentElement.setAttribute('data-theme',t);var d=t==='dark';document.getElementById('ti').innerHTML=d?'&#9789;':'&#9728;';document.getElementById('tt').textContent=d?'Dark':'Light';}}catch(e){}})();
+</script>
+</body></html>
