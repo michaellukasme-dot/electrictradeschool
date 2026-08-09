@@ -89,29 +89,38 @@ iframe{width:100%;height:calc(100vh - 165px);border:0;background:#fff}
    enable Email auth, and add this page's URL to the project's Redirect URLs.
    Until configured, the gate runs in soft mode: it records the email locally and lets them in. */
 var SB_URL="https://lqyljfamaylrtwmrpeir.supabase.co", SB_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxeWxqZmFtYXlscnR3bXJwZWlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNzc3ODIsImV4cCI6MjA5NzY1Mzc4Mn0.Id8SrGIIeQsFOpI3FcvTWJ_HAuD0obd1gPBIe435-Pg";
+/* ALLOWLIST — only these exact emails may open the confidential package (lowercase). FILL before use.
+   Empty = nobody gets in (safe default). Add Repasch / Longley / owner addresses here. */
+var ALLOW=[/* "jim.repasch@example.com","mike.longley@example.com","michaellukas.me@gmail.com" */];
+function allowed(email){ email=(email||'').trim().toLowerCase(); return ALLOW.length>0 && ALLOW.indexOf(email)>=0; }
 var _sb=(window.supabase && SB_URL.indexOf('http')===0)?window.supabase.createClient(SB_URL,SB_ANON):null;
-function unlock(){var g=document.getElementById('gate');if(g)g.style.display='none';document.body.classList.remove('locked');}
+function unlock(email){
+  if(!allowed(email)){                                  // authenticated but NOT allowlisted → fail closed
+    var m=document.getElementById('gMsg'); if(m) m.textContent='This email is not authorized for this package.';
+    if(_sb){ try{ _sb.auth.signOut(); }catch(e){} }
+    return;
+  }
+  var g=document.getElementById('gate'); if(g) g.style.display='none'; document.body.classList.remove('locked');
+}
 function gateInit(){
   document.body.classList.add('locked');
   var btn=document.getElementById('gBtn'),msg=document.getElementById('gMsg');
+  if(!_sb){                                             // NO soft-mode bypass: unconfigured client never opens the docs
+    msg.textContent='This private package is not available here. Contact the owner.';
+    btn.disabled=true; return;
+  }
   btn.onclick=async function(){
     var em=(document.getElementById('gEmail').value||'').trim();
     if(!em||em.indexOf('@')<1){msg.textContent='Please enter a valid email.';return;}
-    if(_sb){
-      btn.disabled=true;msg.textContent='Sending…';
-      try{var r=await _sb.auth.signInWithOtp({email:em,options:{emailRedirectTo:window.location.href.split('#')[0]}});if(r.error)throw r.error;
-        msg.innerHTML='&#9993;&#65039; Check your email for the one-tap link.';}
-      catch(e){msg.textContent='Error: '+(e.message||e);btn.disabled=false;}
-    } else {
-      try{localStorage.setItem('aa.portal.email',em);}catch(e){}
-      msg.textContent='Welcome.';setTimeout(unlock,250);
-    }
+    if(!allowed(em)){msg.textContent='This email is not authorized for this package.';return;}
+    btn.disabled=true;msg.textContent='Sending…';
+    try{var r=await _sb.auth.signInWithOtp({email:em,options:{emailRedirectTo:window.location.href.split('#')[0]}});if(r.error)throw r.error;
+      msg.innerHTML='&#9993;&#65039; Check your email for the one-tap link.';}
+    catch(e){msg.textContent='Error: '+(e.message||e);btn.disabled=false;}
   };
   document.getElementById('gEmail').addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
-  if(_sb){
-    _sb.auth.getSession().then(function(r){if(r.data&&r.data.session)unlock();});
-    _sb.auth.onAuthStateChange(function(_e,s){if(s)unlock();});
-  }
+  _sb.auth.getSession().then(function(r){var s=r.data&&r.data.session; if(s&&s.user) unlock(s.user.email);});
+  _sb.auth.onAuthStateChange(function(_e,s){ if(s&&s.user) unlock(s.user.email); });
 }
 var DOCS=[
  {id:"home",grp:"Start here",t:"Welcome — read me first",home:true},
